@@ -1,9 +1,10 @@
 .tag-file-main {
   background-color: #45b6fe;
-  padding: 10px;
+  padding: 5px;
   height: 20px;
-  padding-top: 2px;
+  padding-top: 4px;
   text-align: center;
   margin-right: 5px;
   border-radius: 5px;
+  font-size: 10px;
 }
