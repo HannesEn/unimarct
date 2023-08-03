@@ -1,0 +1,26 @@
+.App {
+  background-color: rgb(249, 248, 248);
+  height: 100vh;
+}
+.item-div {
+  display: grid;
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.browse-container {
+  margin-left: 60px;
+  width: 200px;
+  margin-top: 30px;
+}
+.browse-hr {
+  height: 2px;
+  background-color: black;
+  border: 0;
+}
+.browse-title {
+  font-size: 25px;
+}
