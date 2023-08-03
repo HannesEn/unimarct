@@ -1,4 +1,6 @@
 import "./item.css";
+import { Tag } from "./tag";
+
 export function Item({ price, title, link, image }) {
   return (
     <div className="container-item">
@@ -11,6 +13,24 @@ export function Item({ price, title, link, image }) {
         </a>
         <h4 className="item-price">
           AUD$ <span className="item-price-span">{price}</span>
+          <div className="tags">
+            <Tag tagText={"hello"} />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+            <Tag />
+          </div>
         </h4>
       </div>
     </div>
