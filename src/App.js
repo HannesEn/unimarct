@@ -4,6 +4,7 @@ import { Item } from "./item";
 import heavy from "./falcon-heavy.jpeg";
 import vertical from "./vertical.jpeg";
 import starship from "./starship.jpeg";
+import { Tag } from "./tag";
 
 function App() {
   return (
@@ -14,46 +15,72 @@ function App() {
         <hr className="browse-hr" />
       </div>
       <div className="item-div">
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={heavy} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={vertical} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
-        <Item title={"Hello"} price={12.5} image={starship} />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
+        <Item
+          tag={[<Tag tagText={"hello"} />, <Tag tagText={"hi"} />]}
+          title={"Hello"}
+          price={12.5}
+          image={starship}
+        />
       </div>
     </div>
   );
