@@ -21,6 +21,8 @@
 }
 .list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo-main {
   margin-right: 800px;
@@ -49,9 +51,17 @@ a:hover {
 .navSearchInput {
   border: 0;
   border-bottom: 2px solid #afafaf;
+  height: 40px;
 }
 .navSearchInputButtonIcon {
   background-color: white;
   border: 0;
   border-bottom: 2px solid #afafaf;
+  height: 40px;
+}
+.navSearchIcon {
+  font-size: 15px;
+}
+.navUserIcon {
+  font-size: 25px;
 }
