@@ -1,4 +1,4 @@
 import { Tag } from "./tag";
-export function tagSimple({}) {
-  return <Tag tagText={"hello"} />;
+export function tagSimple({ simpleTag }) {
+  return <Tag tagText={{ simpleTag }} />;
 }
