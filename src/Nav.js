@@ -1,5 +1,8 @@
 import "./Nav.css";
 import React, { useState } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function Nav({ onSearch }) {
   const [searchInput, setSearchInput] = useState("");
@@ -21,17 +24,17 @@ function Nav({ onSearch }) {
             Unimarct
           </a>
           <input
-            type="text"
-            placeholder="Search items..."
+            className="navSearchInput"
+            type="search"
+            placeholder="Search..."
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-          <button onClick={handleSearch}>Search</button>
-          <a href="/" className="home-button">
-            Home
-          </a>
-          <a className="company-button">Company</a>
+          <button className="navSearchInputButtonIcon" onClick={handleSearch}>
+            {" "}
+            <FontAwesomeIcon icon={faSearch} />
+          </button>
           <a className="profile-icon">Profile</a>
         </div>
       </div>

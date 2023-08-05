@@ -23,7 +23,7 @@
   display: flex;
 }
 .logo-main {
-  margin-right: 600px;
+  margin-right: 800px;
 }
 .search-button,
 .home-button,
@@ -45,4 +45,13 @@ a:hover {
 }
 .logo-main {
   color: #ff6b6b;
+}
+.navSearchInput {
+  border: 0;
+  border-bottom: 2px solid #afafaf;
+}
+.navSearchInputButtonIcon {
+  background-color: white;
+  border: 0;
+  border-bottom: 2px solid #afafaf;
 }

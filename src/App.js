@@ -18,7 +18,7 @@ import spaceSuit from "./spaceSuit.jpeg";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-  const maxLength = 12;
+  const maxLength = 11;
 
   const items = [
     {
