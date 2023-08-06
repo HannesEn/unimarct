@@ -23,15 +23,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .logo-main {
-  margin-right: 800px;
+  margin-right: 900px;
 }
 .search-button,
 .home-button,
 .company-button,
 .profile-icon {
   margin-left: 70px;
+  background-color: white;
 }
 a {
   transition-duration: 1s;
@@ -47,11 +49,13 @@ a:hover {
 }
 .logo-main {
   color: #ff6b6b;
+  background-color: white;
 }
 .navSearchInput {
   border: 0;
   border-bottom: 2px solid #afafaf;
   height: 40px;
+  background-color: white;
 }
 .navSearchInputButtonIcon {
   background-color: white;
@@ -61,7 +65,68 @@ a:hover {
 }
 .navSearchIcon {
   font-size: 15px;
+  background-color: white;
 }
 .navUserIcon {
   font-size: 25px;
+  background-color: white;
+}
+@media screen and (max-width: 1320px) {
+  .logo-main {
+    margin-right: 700px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .logo-main {
+    margin-right: 500px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .logo-main {
+    margin-right: 400px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .logo-main {
+    margin-right: 300px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .profile-icon {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .logo-main {
+    margin-right: 200px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .logo-main {
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .logo-main {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo-main {
+    margin-right: 30px;
+  }
+  .profile-icon {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .logo-main {
+    margin-right: 20px;
+  }
+  .profile-icon {
+    margin-left: 10px;
+  }
+  .navSearchInput {
+    width: 80px;
+  }
 }

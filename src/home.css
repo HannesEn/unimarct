@@ -1,17 +1,17 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-.App {
+* {
   background-color: rgb(249, 248, 248);
-  height: 100vh;
 }
 .item-div {
   display: grid;
   gap: 50px;
   margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 4%;
+  margin-right: 4%;
   max-width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-bottom: 100px;
+  place-items: center;
 }
 .browse-container {
   margin-left: 60px;
@@ -25,4 +25,32 @@
 }
 .browse-title {
   font-size: 25px;
+}
+@media screen and (max-width: 1240px) {
+  .item-div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 935px) {
+  .item-div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 668px) {
+  .item-div {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 470px) {
+  .item-div {
+    place-items: center;
+  }
+}
+@media screen and (max-width: 300px) {
+  .browse-container {
+    width: 150px;
+  }
+  .browse-title {
+    font-size: 20px;
+  }
 }
