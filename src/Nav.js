@@ -1,10 +1,10 @@
 import "./Nav.css";
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { handleTagClick } from "./tagClick";
 
 function Nav({ onSearch }) {
   const [searchInput, setSearchInput] = useState("");
@@ -33,7 +33,10 @@ function Nav({ onSearch }) {
             onChange={(e) => setSearchInput(e.target.value)}
             onKeyDown={handleKeyDown}
           ></input>
-          <button className="navSearchInputButtonIcon" onClick={handleSearch}>
+          <button
+            className="navSearchInputButtonIcon"
+            onClick={(e) => handleSearch(e)}
+          >
             {" "}
             <FontAwesomeIcon className="navSearchIcon" icon={faSearch} />
           </button>
