@@ -50,6 +50,7 @@ a:hover {
 .logo-main {
   color: #ff6b6b;
   background-color: white;
+  font-weight: 900;
 }
 .navSearchInput {
   border: 0;
