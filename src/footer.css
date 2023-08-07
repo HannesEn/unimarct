@@ -65,3 +65,22 @@
   padding-left: 40px;
   font-weight: 900;
 }
+@media screen and (max-width: 847px) {
+  .footer-main {
+    flex-direction: column;
+    height: 500px;
+  }
+  .footer-logo-main {
+    position: unset;
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  .footer-company {
+    margin-right: 0;
+    margin-top: 50px;
+  }
+  .footer-legal {
+    margin-left: 0;
+    margin-top: 0px;
+  }
+}
