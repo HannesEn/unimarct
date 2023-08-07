@@ -16,6 +16,7 @@ import rover from "./rover.jpeg";
 import solarSystem from "./solarSystem.jpeg";
 import spaceSuit from "./spaceSuit.jpeg";
 import { handleTagClick } from "./tagClick";
+import { Footer } from "./footer";
 
 export function Home({ onSearch }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -221,6 +222,7 @@ export function Home({ onSearch }) {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }
