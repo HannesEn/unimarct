@@ -18,39 +18,49 @@ export function Profile() {
         </a>
         <div className="profile-user">
           <FontAwesomeIcon className="profile-user-icon" icon={faCircleUser} />
-          <h1>{userName}</h1>
+          <h1 className="profile-user-user-name">{userName}</h1>
         </div>
         <div className="profile-edit">
-          <h3 className="profile-edit-text">
-            Edit Profile{" "}
-            <FontAwesomeIcon
-              className="profile-next-icon"
-              icon={faAngleRight}
-            />
-          </h3>
+          <div className="profile-edit-sub">
+            <h3 className="profile-edit-text">
+              Edit Profile{" "}
+              <FontAwesomeIcon
+                className="profile-next-icon"
+                icon={faAngleRight}
+              />
+            </h3>
+          </div>
         </div>
         <div className="profile-sell">
-          <h3 className="profile-sell-text">
-            Sell{" "}
-            <FontAwesomeIcon
-              className="profile-next-icon-1"
-              icon={faAngleRight}
-            />
-          </h3>
+          <div className="profile-sell-sub">
+            <h3 className="profile-sell-text">
+              Sell{" "}
+              <FontAwesomeIcon
+                className="profile-next-icon-1"
+                icon={faAngleRight}
+              />
+            </h3>
+          </div>
         </div>
         <div className="profile-past-sales">
-          <h3 className="profile-past-sales-text">
-            Past Sales{" "}
-            <FontAwesomeIcon
-              className="profile-next-icon-2"
-              icon={faAngleRight}
-            />
-          </h3>
+          <div className="profile-past-sales-sub">
+            <h3 className="profile-past-sales-text">
+              Past Sales{" "}
+              <FontAwesomeIcon
+                className="profile-next-icon-2"
+                icon={faAngleRight}
+              />
+            </h3>
+          </div>
         </div>
-        <div className="profile-currently-selling">
-          <h3 className="profile-currently-selling-text">Currently Selling</h3>
-          <div className="profile-currently-selling-item-container">
-            <Item price={30.99} title={"Item"} link={"/"} image={Vertical} />
+        <div className="profile-currently-selling-master-div">
+          <div className="profile-currently-selling">
+            <h3 className="profile-currently-selling-text">
+              Currently Selling
+            </h3>
+            <div className="profile-currently-selling-item-container">
+              <Item price={30.99} title={"Item"} link={"/"} image={Vertical} />
+            </div>
           </div>
         </div>
       </div>

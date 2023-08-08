@@ -118,3 +118,63 @@
   align-items: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 600px) {
+  .profile-next-icon {
+    margin-left: 70px;
+  }
+  .profile-next-icon-1 {
+    margin-left: 150px;
+  }
+  .profile-next-icon-2 {
+    margin-left: 80px;
+  }
+  .profile-edit {
+    width: 50%;
+  }
+  .profile-sell {
+    width: 50%;
+  }
+  .profile-past-sales {
+    width: 50%;
+  }
+  .profile-edit-sub {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-sell-sub {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-past-sales-sub {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-currently-selling {
+    width: 400px;
+  }
+  .profile-currently-selling-master-div {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-user-icon {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .profile-user-user-name {
+    font-size: 25px;
+  }
+  .profile-user {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .profile-currently-selling {
+    width: 270px;
+  }
+}
