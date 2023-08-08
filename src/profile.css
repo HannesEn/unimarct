@@ -1,0 +1,120 @@
+.profile-main {
+  display: flex;
+  justify-content: center;
+}
+.profile-main-sub-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile-user {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 25px;
+}
+.profile-user-icon {
+  font-size: 45px;
+  margin-right: 30px;
+}
+.profile-edit {
+  margin-top: 70px;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+.profile-edit-text {
+  background-color: rgb(192, 192, 192);
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  transition-duration: 2s;
+}
+.profile-sell {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+.profile-sell-text {
+  background-color: rgb(192, 192, 192);
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  transition-duration: 2s;
+}
+.profile-past-sales {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+.profile-past-sales-text {
+  background-color: rgb(192, 192, 192);
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  transition-duration: 2s;
+}
+.profile-next-icon {
+  background-color: rgba(192, 192, 192, 0);
+  margin-left: 350px;
+}
+.profile-next-icon-1 {
+  background-color: rgba(192, 192, 192, 0);
+  margin-left: 425px;
+}
+.profile-next-icon-2 {
+  background-color: rgba(192, 192, 192, 0);
+  margin-left: 353px;
+}
+.profile-edit-text:hover {
+  transition-duration: 2s;
+  background-color: #45b6fe;
+  cursor: pointer;
+}
+.profile-sell-text:hover {
+  transition-duration: 2s;
+  background-color: #45b6fe;
+  cursor: pointer;
+}
+.profile-past-sales-text:hover {
+  transition-duration: 2s;
+  background-color: #45b6fe;
+  cursor: pointer;
+}
+.profile-currently-selling {
+  border: 4px solid #333333;
+  margin-top: 50px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+.profile-currently-selling-text {
+  padding: 20px;
+  padding-top: 5px;
+  font-size: 25px;
+  border-radius: 15px;
+  padding-bottom: 200px;
+}
+.profile-back-icon {
+  transition-duration: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.profile-back-icon:hover {
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.profile-currently-selling-item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
