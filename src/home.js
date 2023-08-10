@@ -194,35 +194,6 @@ export function Home({ onSearch }) {
     );
   });
 
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const getUser = async () => {
-      fetch("http://localhost:3001/auth/login/success", {
-        method: "GET",
-        credentials: "includ",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true,
-        },
-      })
-        .then((response) => {
-          if (response.status === 200) return response.json();
-          throw new Error("authentication failed");
-        })
-        .then((resObject) => {
-          setUser(resObject.user);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    getUser();
-  }, []);
-
-  console.log(user);
-
   return (
     <div className="App">
       <Nav onSearch={(query) => setSearchQuery(query)} />
