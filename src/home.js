@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import Nav from "./Nav";
 import { Item } from "./item";
@@ -188,12 +188,41 @@ export function Home({ onSearch }) {
   const filteredItems = items.filter((item) => {
     const lowerCaseQuery = searchQuery.toLowerCase();
     const itemTags = item.tag.map((tag) => tag.props.tagText.toLowerCase());
-
     return (
       item.title.toLowerCase().includes(lowerCaseQuery) ||
       itemTags.includes(lowerCaseQuery)
     );
   });
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      fetch("http://localhost:3001/auth/login/success", {
+        method: "GET",
+        credentials: "includ",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
+      })
+        .then((response) => {
+          if (response.status === 200) return response.json();
+          throw new Error("authentication failed");
+        })
+        .then((resObject) => {
+          setUser(resObject.user);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getUser();
+  }, []);
+
+  console.log(user);
+
   return (
     <div className="App">
       <Nav onSearch={(query) => setSearchQuery(query)} />

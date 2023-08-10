@@ -39,7 +39,7 @@ function Nav({ onSearch }) {
             {" "}
             <FontAwesomeIcon className="navSearchIcon" icon={faSearch} />
           </button>
-          <a className="profile-icon" href="/profile">
+          <a className="profile-icon" href="/login">
             <FontAwesomeIcon className="navUserIcon" icon={faCircleUser} />
           </a>
         </div>

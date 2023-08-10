@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
-import passport from "passport";
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
-const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+const passport = require("passport");
+const GOOGLE_CLIENT_ID =
+  "135744594815-chomnc8nm85b1hsf4bhguae5nvjef1qc.apps.googleusercontent.com";
+const GOOGLE_CLIENT_SECRET = "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";
 
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 
@@ -10,7 +10,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://yourdomain:3000/auth/google/callback",
+      callbackURL: "/auth/google/callback",
       passReqToCallback: true,
     },
     function (request, accessToken, refreshToken, profile, done) {
