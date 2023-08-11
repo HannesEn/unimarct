@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getUser = () => {
@@ -24,19 +25,25 @@ function App() {
         })
         .then((resObject) => {
           setUser(resObject.user);
+          setIsLoading(false);
+          console.log(resObject.user);
         })
         .catch((err) => {
+          setIsLoading(false);
           console.log(err);
         });
     };
     getUser();
   }, []);
 
-  console.log(user);
+  if (isLoading) {
+    return <div className="loading-main">Loading...</div>;
+  }
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user} />} />
         <Route
           path="/profile"
           element={user ? <Profile /> : <Navigate to="/login" />}

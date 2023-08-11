@@ -72,6 +72,18 @@ a:hover {
   font-size: 25px;
   background-color: white;
 }
+.navUserImage {
+  transition-duration: 1s;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+}
+.navUserImage:hover {
+  transition-duration: 3s;
+  border: 3px solid #45b6fe;
+}
 @media screen and (max-width: 1320px) {
   .logo-main {
     margin-right: 700px;

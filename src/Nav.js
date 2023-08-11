@@ -5,7 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { handleTagClick } from "./tagClick";
 
-function Nav({ onSearch }) {
+function Nav({ onSearch, user }) {
   const [searchInput, setSearchInput] = useState("");
 
   const handleSearch = () => {
@@ -39,8 +39,17 @@ function Nav({ onSearch }) {
             {" "}
             <FontAwesomeIcon className="navSearchIcon" icon={faSearch} />
           </button>
-          <a className="profile-icon" href="/login">
-            <FontAwesomeIcon className="navUserIcon" icon={faCircleUser} />
+          <a className="profile-icon" href={user ? "/profile" : "/login"}>
+            {" "}
+            {user ? (
+              <img
+                className="navUserImage"
+                alt="pfp"
+                src={user.photos[0].value}
+              />
+            ) : (
+              <FontAwesomeIcon className="navUserIcon" icon={faCircleUser} />
+            )}
           </a>
         </div>
       </div>
@@ -49,3 +58,9 @@ function Nav({ onSearch }) {
 }
 
 export default Nav;
+
+// {user ? (
+//  <FontAwesomeIcon className="navUserIcon" icon={faCircleUser} />
+// ) : (
+//   <img alt="pfp" src={user.photos[0].value} />
+// )}
