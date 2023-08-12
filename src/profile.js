@@ -6,10 +6,17 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { Item } from "./item";
 import Vertical from "./vertical.jpeg";
 import { Tag } from "./tag";
-
 let userName = "Hannes Ennemann";
 
-export function Profile() {
+export function Profile({ isLoading, setIsLoading }) {
+  const logout = () => {
+    setIsLoading(true);
+    window.open("http://localhost:3001/auth/logout", "_self");
+    setIsLoading(false);
+  };
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="profile-main">
       <div className="profile-main-sub-div">
@@ -63,6 +70,9 @@ export function Profile() {
             </div>
           </div>
         </div>
+        <button className="logout-button" onClick={logout} disabled={isLoading}>
+          {isLoading ? "Logging out" : "Logout"}
+        </button>
       </div>
     </div>
   );

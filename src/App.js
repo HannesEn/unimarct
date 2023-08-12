@@ -3,6 +3,7 @@ import { Home } from "./home";
 import { Profile } from "./profile";
 import { Login } from "./login";
 import { useState, useEffect } from "react";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,19 +35,25 @@ function App() {
         });
     };
     getUser();
+    console.log(isLoading);
   }, []);
-
   if (isLoading) {
     return <div className="loading-main">Loading...</div>;
   }
-
+  console.log(user);
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home user={user} />} />
+        <Route path="/" element={<Home isLoading={isLoading} user={user} />} />
         <Route
           path="/profile"
-          element={user ? <Profile /> : <Navigate to="/login" />}
+          element={
+            user ? (
+              <Profile setIsLoading={setIsLoading} isLoading={isLoading} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
         />
         <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
       </Routes>

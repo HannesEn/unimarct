@@ -5,7 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { handleTagClick } from "./tagClick";
 
-function Nav({ onSearch, user }) {
+function Nav({ onSearch, user, isLoading }) {
   const [searchInput, setSearchInput] = useState("");
 
   const handleSearch = () => {
@@ -16,6 +16,10 @@ function Nav({ onSearch, user }) {
       handleSearch();
     }
   };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="body">

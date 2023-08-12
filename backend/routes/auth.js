@@ -5,12 +5,7 @@ const CLIENT_URL = "http://localhost:3000/";
 const FAIL_REDIRECT = "/login/failed";
 
 router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
-router.get("/login/failed", (req, res) => {
-  res.status(401).json({
-    success: false,
-    message: "failed to authenticate",
-  });
-});
+
 router.get("/login/success", (req, res) => {
   if (req.user) {
     res.status(200).json({
@@ -20,6 +15,12 @@ router.get("/login/success", (req, res) => {
       cookies: req.cookies,
     });
   }
+});
+router.get("/login/failed", (req, res) => {
+  res.status(401).json({
+    success: false,
+    message: "failed to authenticate",
+  });
 });
 
 router.get("/logout", (req, res) => {

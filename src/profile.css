@@ -118,6 +118,10 @@
   align-items: center;
   margin-bottom: 50px;
 }
+.logout-button {
+  margin-bottom: 50px;
+  height: 20px;
+}
 @media screen and (max-width: 600px) {
   .profile-next-icon {
     margin-left: 70px;
