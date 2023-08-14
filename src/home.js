@@ -193,11 +193,6 @@ export function Home({ user, isLoading }) {
       itemTags.includes(lowerCaseQuery)
     );
   });
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="App">
       <Nav

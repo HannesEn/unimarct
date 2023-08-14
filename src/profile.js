@@ -10,13 +10,9 @@ let userName = "Hannes Ennemann";
 
 export function Profile({ isLoading, setIsLoading }) {
   const logout = () => {
-    setIsLoading(true);
     window.open("http://localhost:3001/auth/logout", "_self");
     setIsLoading(false);
   };
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
   return (
     <div className="profile-main">
       <div className="profile-main-sub-div">

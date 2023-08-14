@@ -17,10 +17,6 @@ function Nav({ onSearch, user, isLoading }) {
     }
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="body">
       <div className="nav">

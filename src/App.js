@@ -3,42 +3,45 @@ import { Home } from "./home";
 import { Profile } from "./profile";
 import { Login } from "./login";
 import { useState, useEffect } from "react";
-import { faL } from "@fortawesome/free-solid-svg-icons";
+import "./app.css";
 
 function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const getUser = () => {
-      fetch("http://localhost:3001/auth/login/success", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true,
-        },
-      })
-        .then((response) => {
-          if (response.status === 200) return response.json();
-          throw new Error("authentication failed");
-        })
-        .then((resObject) => {
+    const getUser = async () => {
+      try {
+        const response = await fetch(
+          "http://localhost:3001/auth/login/success",
+          {
+            method: "GET",
+            credentials: "include",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (response.status === 200) {
+          const resObject = await response.json();
           setUser(resObject.user);
           setIsLoading(false);
           console.log(resObject.user);
-        })
-        .catch((err) => {
-          setIsLoading(false);
-          console.log(err);
-        });
+        } else {
+          throw new Error("Authentication failed");
+        }
+      } catch (error) {
+        setIsLoading(false);
+        console.log(error);
+      }
     };
+    console.log();
     getUser();
-    console.log(isLoading);
   }, []);
-  if (isLoading) {
-    return <div className="loading-main">Loading...</div>;
+  if (isLoading & (user === null)) {
+    return <div className="loading-main-app">Loading...</div>;
   }
   console.log(user);
   return (
