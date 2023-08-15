@@ -4,10 +4,12 @@ import { Profile } from "./profile";
 import { Login } from "./login";
 import { useState, useEffect } from "react";
 import "./app.css";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [loggedOut, setLoggedOut] = useState(true);
 
   useEffect(() => {
     const getUser = async () => {
@@ -23,24 +25,25 @@ function App() {
             },
           }
         );
+        console.log(response);
 
         if (response.status === 200) {
           const resObject = await response.json();
           setUser(resObject.user);
-          setIsLoading(false);
           console.log(resObject.user);
         } else {
           throw new Error("Authentication failed");
         }
       } catch (error) {
-        setIsLoading(false);
         console.log(error);
+      } finally {
+        setIsLoading(false);
       }
     };
-    console.log();
     getUser();
   }, []);
-  if (isLoading & (user === null)) {
+  console.log(user);
+  if (isLoading) {
     return <div className="loading-main-app">Loading...</div>;
   }
   console.log(user);
@@ -52,7 +55,12 @@ function App() {
           path="/profile"
           element={
             user ? (
-              <Profile setIsLoading={setIsLoading} isLoading={isLoading} />
+              <Profile
+                setIsLoading={setIsLoading}
+                isLoading={isLoading}
+                loggedOut={loggedOut}
+                setLoggedOut={setLoggedOut}
+              />
             ) : (
               <Navigate to="/login" />
             )
