@@ -18,7 +18,7 @@ import spaceSuit from "./spaceSuit.jpeg";
 import { handleTagClick } from "./tagClick";
 import { Footer } from "./footer";
 
-export function Home({ user, isLoading }) {
+export function Home({ user }) {
   const [searchQuery, setSearchQuery] = useState("");
   const maxLength = 11;
 
@@ -195,11 +195,7 @@ export function Home({ user, isLoading }) {
   });
   return (
     <div className="App">
-      <Nav
-        user={user}
-        isLoading={isLoading}
-        onSearch={(query) => setSearchQuery(query)}
-      />
+      <Nav user={user} onSearch={(query) => setSearchQuery(query)} />
       <div className="browse-container">
         <h1 className="browse-title">
           {searchQuery.length != 0

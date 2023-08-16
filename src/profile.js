@@ -1,18 +1,27 @@
 import "./profile.css";
-import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser, faL } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { Item } from "./item";
 import Vertical from "./vertical.jpeg";
+import { useState, useEffect } from "react";
 import { Tag } from "./tag";
+
 let userName = "Hannes Ennemann";
 
 export function Profile({ isLoading, setIsLoading }) {
+  const [logoutInitiated, setLogoutInitiated] = useState(false);
+
   const logout = () => {
+    setIsLoading(true);
     window.open("http://localhost:3001/auth/logout", "_self");
     setIsLoading(false);
+    setLogoutInitiated(true);
   };
+  if (logoutInitiated) {
+    setIsLoading(false);
+  }
   return (
     <div className="profile-main">
       <div className="profile-main-sub-div">
@@ -66,8 +75,8 @@ export function Profile({ isLoading, setIsLoading }) {
             </div>
           </div>
         </div>
-        <button className="logout-button" onClick={logout} disabled={isLoading}>
-          {isLoading ? "Logging out" : "Logout"}
+        <button className="logout-button" onClick={logout}>
+          Logout
         </button>
       </div>
     </div>

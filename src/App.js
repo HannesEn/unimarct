@@ -8,8 +8,7 @@ import { faL } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [loggedOut, setLoggedOut] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getUser = async () => {
@@ -50,17 +49,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home isLoading={isLoading} user={user} />} />
+        <Route path="/" element={<Home user={user} />} />
         <Route
           path="/profile"
           element={
             user ? (
-              <Profile
-                setIsLoading={setIsLoading}
-                isLoading={isLoading}
-                loggedOut={loggedOut}
-                setLoggedOut={setLoggedOut}
-              />
+              <Profile setIsLoading={setIsLoading} isLoading={isLoading} />
             ) : (
               <Navigate to="/login" />
             )
